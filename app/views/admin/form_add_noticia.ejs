@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Portal de notícias</title>
+		
+		<!-- JQuery -->
+		<script src="js/jquery-2.2.1.js"></script>
+
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">	
+		<!-- incluindo css -->
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico" />
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<img src="images/logo.png"/>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+					<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="/noticias">Notícias</a>
+					</li>
+				</ul>
+				</div>
+			</div>
+		  </nav>
+
+		<div class="container">   
+			<!--<div class="container">  -->
+			  <form class="needs-validation" action="/noticias/salvar" method="post" novalidate> 
+				<!-- Agente fiduciario -->  
+				<div class="form-row">
+					<div class="col-md-4 mb-3">
+					  <label for="validationCustom02">Título da notícia</label>
+					  <input type="text" class="form-control" name="titulo" id="titulo" required>
+					  <div class="invalid-feedback">
+						O campo Título da notícia deve estar preenchido!
+					  </div>
+					</div>
+				</div>
+				<div class="form-row">		
+					<div class="col-md-2 mb-3">
+						<label for="validationCustom02">Data da notícia</label>
+						<input type="date" class="form-control" name="data_noticia" id="data_noticia" required>
+						<div class="invalid-feedback">
+						  O campo Data da notícia deve estar preenchido!
+						</div>
+					</div>										
+				</div>
+				<div class="form-row">	
+					<div class="col-md-4 mb-3">
+						<label for="validationCustom02">Resumo</label>
+						<input type="text" class="form-control" name="resumo" id="resumo" required>
+						<div class="invalid-feedback">
+						  O campo Resumo deve estar preenchido!
+						</div>
+					</div>
+				</div>
+				<div class="form-row">		
+					<div class="col-md-4 mb-3">
+						<label for="validationCustom02">Nome do autor</label>
+						<input type="text" class="form-control" name="autor" id="autor" required>
+						<div class="invalid-feedback">
+						  O campo Nome do autor deve estar preenchido!
+						</div>
+					</div>										
+				</div>				
+				<div class="form-row">
+					<div class="col-md-4 mb-3">
+					  <label for="validationCustom01">Notícia</label>
+					  <textarea class="form-control" name="noticia" id="noticia" rows="5" cols="30" required></textarea>
+					  <div class="invalid-feedback">
+						O campo Notícia deve estar preenchido!
+					  </div>
+					</div> 
+			  
+						
+				</div>  
+				<button class="btn btn-primary mb-2" type="submit">Cadastrar</button>
+			  </form>
+			</div>
+			
+			<script>
+				// Example starter JavaScript for disabling form submissions if there are invalid fields
+				(function() {
+				  'use strict';
+				  window.addEventListener('load', function() {
+					// Fetch all the forms we want to apply custom Bootstrap validation styles to
+					var forms = document.getElementsByClassName('needs-validation');
+					// Loop over them and prevent submission
+					var validation = Array.prototype.filter.call(forms, function(form) {
+					  form.addEventListener('submit', function(event) {
+						if (form.checkValidity() === false) {
+						  event.preventDefault();
+						  event.stopPropagation();
+						}
+						form.classList.add('was-validated');
+					  }, false);
+					});
+				  }, false);
+				})();
+				</script>
+			
+  
+  
+		  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	</body>
+</html>
