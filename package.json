@@ -2,18 +2,20 @@
   "name": "portal_noticias",
   "version": "1.0.0",
   "description": "site de notícias",
-  "main": "app.js",
+  "main": "node app.js",
   "scripts": {
+    "start:dev": "npx nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lucas Crispim",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "consign": "^0.1.6",
-    "ejs": "^3.0.2",
-    "express": "^4.17.1",
-    "express-validator": "^6.4.0",
-    "mysql": "^2.18.1"
+    "body-parser": "1.19.0",
+    "consign": "0.1.6",
+    "dotenv": "8.2.0",
+    "ejs": "3.0.2",
+    "express": "4.17.1",
+    "express-validator": "6.4.0",
+    "mysql": "2.18.1"
   }
 }

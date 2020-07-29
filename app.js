@@ -1,5 +1,6 @@
-let app = require('./config/server');
+require('dotenv').config()
+const app = require('./config/server');
 
-app.listen(3001,()=>{
+app.listen(process.env.APP_PORT, () => {
     console.log("Servidor On");
 });
